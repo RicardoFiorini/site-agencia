@@ -1,0 +1,221 @@
+/* Importa as fontes (Luxo e Legibilidade)
+   Playfair Display: Serifada, alta moda, luxuosa (para títulos)
+   Lato: Sans-serif, limpa, elegante (para corpo de texto)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@700;900&display=swap');
+
+/* Branding: "O Legado Criativo"
+  Paleta: Marfim, Verde-Caçador, Dourado/Latão e Cinza-Sutil
+*/
+:root {
+  --bg-cream: #FDFBF5;       /* Fundo de marfim / pergaminho */
+  --bg-card-section: #FFFFFF;  /* Branco puro para cards e seções de destaque */
+  --text-dark: #2F2F2F;       /* Quase preto, mas mais suave */
+  --text-muted: #6c757d;      /* Cinza padrão para textos secundários */
+  --accent-green: #0A381F;    /* Verde-caçador (Hunter Green) */
+  --accent-gold: #B89B70;     /* Ouro/Latão envelhecido */
+  --border-color: #EAEAEA;    /* Cinza bem claro para bordas finas */
+}
+
+/* Base */
+body {
+  background-color: var(--bg-cream);
+  color: var(--text-dark);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300; /* Texto mais leve, mais elegante */
+}
+
+/* Tipografia (A alma do "Old Money") */
+h1, h2, h3, h4, h5, h6, .navbar-brand, .display-4 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: 0.5px;
+}
+
+.display-4 {
+  font-weight: 900;
+  color: var(--accent-green); /* Título principal com o verde forte */
+}
+
+.text-accent {
+  color: var(--accent-green);
+}
+
+.text-gold {
+  color: var(--accent-gold);
+}
+
+/* Navbar (Clássica, sem transparência) */
+.navbar {
+  background: var(--bg-cream);
+  border-bottom: 1px solid var(--border-color); /* Linha fina e clássica */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03); /* Sombra muito sutil */
+}
+
+.navbar .nav-link {
+  color: var(--text-dark);
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--accent-green); /* Destaque em verde */
+}
+
+.navbar-brand {
+  color: var(--accent-green);
+  font-weight: 900;
+  font-size: 1.8rem;
+}
+
+/* Botões (Sóbrios e Retos) */
+.btn {
+  border-radius: 0; /* Bordas retas, mais tradicional */
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 32px;
+  transition: all 0.4s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent-green);
+  border-color: var(--accent-green);
+  color: var(--bg-card-section); /* Texto branco/creme */
+}
+
+.btn-primary:hover {
+  background-color: #062a18; /* Verde um tom mais escuro */
+  border-color: #062a18;
+  color: var(--bg-card-section);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* O HTML usa "btn-outline-light" por padrão. 
+   Vamos reestilizá-lo para ser um outline escuro contra o fundo claro. */
+.btn-outline-light {
+  border: 2px solid var(--accent-green);
+  color: var(--accent-green);
+}
+
+.btn-outline-light:hover {
+  background-color: var(--accent-green);
+  color: var(--bg-card-section);
+  transform: translateY(-2px);
+}
+
+/* Títulos de Seção */
+.section-title {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-gold); /* Títulos de seção em dourado */
+  margin-bottom: 1rem;
+  font-size: 1.1rem; /* Mais sutil, como um subtítulo */
+}
+
+/* Cards (Limpos, com bordas finas) */
+.card {
+  background-color: var(--bg-card-section); /* Fundo branco */
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Sombra de elevação sutil */
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  border-color: var(--accent-gold); /* Borda dourada sutil no hover */
+}
+
+.card-title {
+  color: var(--accent-green);
+  font-family: 'Playfair Display', serif;
+}
+
+.card-text {
+  font-weight: 300;
+  color: var(--text-muted);
+}
+
+/* Formulário (Clássico) */
+.form-control, .form-select {
+  background-color: var(--bg-card-section);
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  color: var(--text-dark);
+  padding: 12px 15px;
+}
+
+.form-control:focus {
+  background-color: var(--bg-card-section);
+  border-color: var(--accent-green);
+  color: var(--text-dark);
+  box-shadow: 0 0 0 0.2rem rgba(10, 56, 31, 0.1); /* Sombra de foco sutil */
+}
+
+.form-control::placeholder {
+  color: #999;
+  font-weight: 300;
+}
+
+/* Footer (Rodapé) */
+footer {
+  background-color: var(--bg-card-section); /* Seção branca */
+  border-top: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 2.5rem 0;
+}
+
+footer p {
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Accordion (Página de Serviços) */
+.accordion-item {
+  background-color: var(--bg-card-section);
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+}
+
+.accordion-button {
+  background-color: var(--bg-card-section);
+  color: var(--text-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  border-radius: 0;
+}
+.accordion-button:not(.collapsed) {
+  background-color: var(--bg-cream); /* Fundo creme quando aberto */
+  color: var(--accent-green);
+  box-shadow: none;
+}
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+/* Altera a cor da seta do accordion (padrão é azul) */
+.accordion-button::after {
+  filter: grayscale(1) invert(1) brightness(0.5);
+}
+
+/* Animação de Fade-in (A mesma, funciona perfeitamente) */
+.hidden-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.visible-fade {
+  opacity: 1;
+  transform: translateY(0);
+}
